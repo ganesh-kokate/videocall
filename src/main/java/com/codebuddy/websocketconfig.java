@@ -17,9 +17,11 @@
             com.corundumstudio.socketio.Configuration config =
                     new com.corundumstudio.socketio.Configuration();
 
-            String port = System.getenv("PORT");
-            config.setHostname(host);
-            config.setPort(port != null ? Integer.parseInt(port) : 8181);
+
+            config.setHostname("0.0.0.0");
+            String portEnv = System.getenv("PORT");
+            int port = (portEnv != null) ? Integer.parseInt(portEnv) : 8080;
+            config.setPort(port);
 
             return new SocketIOServer(config);
         }
