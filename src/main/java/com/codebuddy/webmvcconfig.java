@@ -13,6 +13,6 @@ public class webmvcconfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
 
-        registry.addMapping("/**").allowedOriginPatterns("*").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").allowedHeaders("*");;
+        registry.addMapping("/**").allowedOriginPatterns("https://videocall-production-2692.up.railway.app").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").allowedHeaders("*");;
     }
 }

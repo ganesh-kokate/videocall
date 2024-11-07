@@ -11,14 +11,17 @@
         @Value("${socketio.host}")
         private String host;
 
+        @Value("${PORT}")
+        private String port;
+
         @Bean
         public SocketIOServer socketIOServer() throws Exception {
 
             com.corundumstudio.socketio.Configuration config =
                     new com.corundumstudio.socketio.Configuration();
 
-            config.setHostname(host);
-            config.setPort(8000);
+            config.setHostname("0.0.0.0");
+            config.setPort(Integer.parseInt(port));
 
             return new SocketIOServer(config);
         }
