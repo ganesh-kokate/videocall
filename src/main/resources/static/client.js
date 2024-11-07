@@ -17,7 +17,7 @@ const iceServers = {
 };
 
 //using io.connect we conect to server on specified address
-let socket = io.connect(window.location.origin, { secure: true , transports: ["websocket"]});
+let socket = io.connect("wss://videocall-production-2692.up.railway.app/socket.io/", {  transports: ["websocket"]});
 
 //let socket = io.connect("http://192.168.120.106:8000");
 
