@@ -8,13 +8,16 @@
     @Configuration
     public class websocketconfig {
 
+        @Value("${socketio.host}")
+        private String host;
+
         @Bean
         public SocketIOServer socketIOServer() throws Exception {
 
             com.corundumstudio.socketio.Configuration config =
                     new com.corundumstudio.socketio.Configuration();
 
-            config.setHostname("192.168.59.106");
+            config.setHostname(host);
             config.setPort(8000);
 
             return new SocketIOServer(config);

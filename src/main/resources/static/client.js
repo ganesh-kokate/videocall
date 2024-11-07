@@ -1,4 +1,4 @@
-const LOCAL_IP_ADDRESS = "192.168.59.106";
+const LOCAL_IP_ADDRESS = "192.168.3.107";
 
 const getElement = id => document.getElementById(id);
 const [btnConnect, btnToggleVideo, btnToggleAudio, divRoomConfig, roomDiv, roomNameInput, localVideo, remoteVideo] = ["btnConnect",
@@ -17,7 +17,7 @@ const iceServers = {
 };
 
 //using io.connect we conect to server on specified address
-let socket = io.connect("http://192.168.59.106:8000", { secure: true });
+let socket = io.connect("http://192.168.3.107:8000", { secure: true });
 
 //let socket = io.connect("http://192.168.120.106:8000");
 
