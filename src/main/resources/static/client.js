@@ -17,7 +17,7 @@ const iceServers = {
 };
 
 //using io.connect we conect to server on specified address
-let socket = io.connect("http://192.168.3.107:8000", { secure: true });
+let socket = io.connect("https://192.168.3.107:8000", { secure: true });
 
 //let socket = io.connect("http://192.168.120.106:8000");
 
