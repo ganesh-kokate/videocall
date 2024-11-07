@@ -16,8 +16,12 @@ const iceServers = {
     ]
 };
 
+let port = window.location.port || "8181";
+
+let socketUrl = `wss://${window.location.hostname}:${port}/socket.io/`;
+
 //using io.connect we conect to server on specified address
-const socket = io.connect("/", {
+const socket = io.connect(socketUrl, {
     transports: ["websocket"]
 });
 
