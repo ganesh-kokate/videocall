@@ -19,7 +19,7 @@
 
             String port = System.getenv("PORT");
             config.setHostname(host);
-            config.setPort(port != null ? Integer.parseInt(port) : 8080);
+            config.setPort(port != null ? Integer.parseInt(port) : 8181);
 
             return new SocketIOServer(config);
         }
