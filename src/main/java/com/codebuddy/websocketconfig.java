@@ -11,7 +11,7 @@
         @Value("${socketio.host}")
         private String host;
 
-        @Value("${PORT}")
+        @Value("${PORT:8181}")
         private String port;
 
         @Bean
