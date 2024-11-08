@@ -17,7 +17,7 @@ const iceServers = {
 };
 
 
-let socketUrl = `wss://${window.location.hostname}/socket.io/`;
+let socketUrl = `http://${window.location.hostname}:8000`;
 
 //using io.connect we conect to server on specified address
 const socket = io.connect(socketUrl, {
