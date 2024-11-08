@@ -22,8 +22,8 @@
                     new com.corundumstudio.socketio.Configuration();
 
             config.setHostname("0.0.0.0");
-            config.setPort(Integer.parseInt(port));
-           // config.setPort(8000);
+           // config.setPort(Integer.parseInt(port));
+            config.setPort(8000);
 
             return new SocketIOServer(config);
         }
