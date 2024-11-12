@@ -13,3 +13,4 @@ services:
     scaling:
       minInstances: 1
       maxInstances: 3
+      targetCPUPercent: 70  # Adjust based on your application's expected CPU usage
