@@ -111,18 +111,6 @@ const handleSocketEvent = (eventName, callback) => socket.on(eventName,
     callback);
 
 
-    // navigator.mediaDevices.getUserMedia({ video: true })
-    //     .then(stream => {
-    //         localStream = stream;
-    //         localVideo.srcObject = stream;
-    //         isCaller = true;
-    //     })
-    //     .catch(error => {
-    //         console.error('Error accessing media devices.', error);
-    //     });
-
-
-
 //removed  and replace with ()
 handleSocketEvent("created",e => {
     navigator.mediaDevices.getUserMedia(streamConstraints)  //navigator.mediaDevices.getUserMedia() is a Web API function that prompts the user for permission to use their camera and/or microphone based on the provided streamConstraints.
